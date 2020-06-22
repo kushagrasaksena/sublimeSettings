@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+	int powmod(int x,int y,int mod = MOD){
+	int res = 1;
+	while(y>0)
+	{
+		if(y&1)
+			res = mul(res,x,mod);
+		x = mul(x,x,mod);
+		y=y>>1;
+	}
+	return res;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>powmodfun</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

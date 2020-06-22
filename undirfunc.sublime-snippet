@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+void addEdge(int x , int y)
+	{
+		//Undirected Graph
+		adj[x].push_back(y);                   //Edge from vertex x to vertex y
+		adj[y].push_back(x);				  //Edge from vertex y to vertex x
+	}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>undirfun</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+//we calculate C(n,k)
+ll power(ll a, ll n)
+{
+	ll res = 1;
+	while (n > 0)
+	{
+		if (n % 2 == 0)
+			a = ((a % MOD) * (a % MOD)) % MOD, n /= 2;
+		else
+			res = ((res % MOD) * (a % MOD)) % MOD , n--;
+	}
+	return res;
+}
+ll C(int n , int k)
+{
+	if (k > n) return 0;
+	ll res = F[n];
+	res = (res * power(F[k], MOD - 2)) % MOD; //inverse of K = power(F[k],MOD-2)
+	res = (res * power(F[n - k], MOD - 2)) % MOD; //inverse of N-K = power(F[N-K],MOD-2)
+
+	return res;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>C(n,k)</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

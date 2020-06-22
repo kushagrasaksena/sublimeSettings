@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+ll modularExpo(ll a, ll n)
+{
+	ll res = 1;
+	while (n > 0)
+	{
+		if (n % 2 == 0)
+			a = (a * a) % MOD, n /= 2;
+		else
+			res = (res * a) % MOD , n--;
+	}
+	return res;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>modexpofun</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
